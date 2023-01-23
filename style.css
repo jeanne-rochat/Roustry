@@ -1,0 +1,99 @@
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.parallax {
+    /* The image used */
+    background-image: url("paralaxe.jpg");
+  
+    /* Set a specific height */
+    min-height: 800px;   
+    margin: -15%;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .droite {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color:  rgb(233, 255, 228);
+}
+
+h1{
+    text-align: center;
+    padding-top: 50vh;
+    font-size: 3em;
+    color:  rgb(233, 255, 228);
+}
+
+#description {
+    margin-top: 30vh;
+    border: 5px solid  rgb(67, 50, 50);
+    color:  rgb(67, 50, 50);
+    padding: 2vw;
+    border-radius: 2%;
+}
+.graph{
+    background-color: rgb(133, 69, 69);
+    margin: 5vw;
+    width: 45vw;
+    border-radius: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.graphiques{
+    display: flex;
+}
+
+.graphiques >* {
+    display: flex;
+    justify-content: center;
+}
+#deuxpartie{
+    display: flex;
+}
+
+#titredeuxpartie{
+    text-align: center;
+    font-size: 2em;
+    color:  rgb(67, 50, 50);
+}
+#img{
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    width: 80vw;
+    height: auto;
+}
+img{
+    width: 100%;
+    height: auto;
+}
+.img{
+    margin: 2vw;
+}
+
+footer{
+    height: 25vh;
+    background-color:  rgb(67, 50, 50);
+    margin: -5vh;
+    margin-top: 10vh;
+}
+a{
+    display: flex;
+    justify-content: center;
+    margin-top: 10vh;
+    color: rgb(233, 255, 228);
+}
