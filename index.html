@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+
+<section class="parallax">
+    <h1>Analyse des incendies en Corse</h1>
+</section>
+
+<section id="description">
+    <h2>Le rechauffement climatique declanche forcement plus d'incendies qu'autrefois. Surtout en corse ou nous sommes en alerte rouge tout les ans et ou se trouve principalement du maquis et des herbes seches. Des interdictions de feux ont été mis en place mais ils sont tout de meme courant. Analisons donc les chiffre d'un année proche: celle de 2020</h2>
+</section>
+
+<section class="graphiques">
+
+    <div class="graph">
+        
+        
+        <div class="droite">
+            <div id="graph1" style="width:100%; height:400px"></div></div>
+
+            
+
+            <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.1/dist/echarts.js"></script>
+            <script>
+              fetch('./feu.json')
+                .then((response) => response.json())
+                .then((json) => {
+                  // Initialize the echarts instance based on the prepared dom
+                  const myChart = echarts.init(document.querySelector('#graph1'));
+            
+                  const tableauDeNombres = json.map((unObjet) => unObjet['CORSE-DU-SUD'])
+            
+            
+                  // Specify the configuration items and data for the chart
+                  const option = {
+            
+
+                    tooltip: {},
+                    title: {
+                        text: 'Nombre de feu en corse du sud ' //CHANGER LE TITRE ICI
+},
+                        
+                    
+                    xAxis: {
+                      data: ["0/5","5/10","10/15","15/20","20/25","25/30","30/35","40/45","45/50","50/55","+55"]// Ecrit 1, 2, 3, 4, ...
+                },
+                    yAxis: {
+                    },
+                    series: [
+                      {
+                        
+                        name: 'Nombre d incendies',
+                        type: 'bar',
+                        color: '#A4303F',
+                        
+                        data: tableauDeNombres // Mets les valeurs pour avoir les bars
+                      }
+                    ]
+                  };
+            
+                  // Display the chart using the configuration items and data just specified.
+                  myChart.setOption(option);
+            
+                });
+            
+            </script>
+
+
+
+    </div>
+
+    <div class="graph">
+
+            
+               
+        
+        <div class="droite">
+            <div id="graph2" style="width:100%; height:400px"></div></div>
+
+            
+
+            <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.1/dist/echarts.js"></script>
+            <script>
+              fetch('./feu.json')
+                .then((response) => response.json())
+                .then((json) => {
+                  // Initialize the echarts instance based on the prepared dom
+                  const myChart = echarts.init(document.querySelector('#graph2'));
+            
+                  const tableauDeNombres = json.map((unObjet) => unObjet['HAUTE-CORSE'])
+            
+            
+                  // Specify the configuration items and data for the chart
+                  const option = {
+            
+
+                    tooltip: {},
+                    title: {
+                        text: 'Nombre de feu en haute corse ' //CHANGER LE TITRE ICI
+},
+                        
+                    
+                    xAxis: {
+                      data: ["0/5","5/10","10/15","15/20","20/25","25/30","30/35","40/45","45/50","50/55","+55"]// Ecrit 1, 2, 3, 4, ...
+                },
+                    yAxis: {
+                    },
+                    series: [
+                      {
+                        
+                        name: 'Nombre d incendies',
+                        type: 'bar',
+                        color: '#A4303F',
+                        
+                        data: tableauDeNombres // Mets les valeurs pour avoir les bars
+                      }
+                    ]
+                  };
+            
+                  // Display the chart using the configuration items and data just specified.
+                  myChart.setOption(option);
+            
+                });
+            
+            </script>
+
+    
+        
+        </div>
+    </div>
+</section>
+<section class="graphiques">
+    <div class="graph">
+
+        
+            <div class="droite">
+                <div id="graph3" style="width:100%; height:400px"></div></div>
+    
+                
+    
+                <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.1/dist/echarts.js"></script>
+                <script>
+                  fetch('./feu.json')
+                    .then((response) => response.json())
+                    .then((json) => {
+                      // Initialize the echarts instance based on the prepared dom
+                      const myChart = echarts.init(document.querySelector('#graph3'));
+                
+                      const tableauDeNombres = json.map((unObjet) => unObjet['CORSE-DU-SUD superficie brulée'])
+                
+                
+                      // Specify the configuration items and data for the chart
+                      const option = {
+                
+    
+                        tooltip: {},
+                        title: {
+                        text: 'Superficie brulé en corse du sud ' //CHANGER LE TITRE ICI
+},
+                        
+                        
+                        xAxis: {
+                          data:  ["0/5","5/10","10/15","15/20","20/25","25/30","30/35","40/45","45/50","50/55","+55"]
+                    },
+                        yAxis: {
+                        },
+                        series: [
+                          {
+                            
+                            name: 'Surface brulée',
+                            type: 'bar',
+                            color: '#77AD78',
+                            
+                            data: tableauDeNombres // Mets les valeurs pour avoir les bars
+                          }
+                        ]
+                      };
+                
+                      // Display the chart using the configuration items and data just specified.
+                      myChart.setOption(option);
+                
+                    });
+                
+                </script>
+    
+        
+        
+        </div>
+    </div>
+
+    <div class="graph">
+
+            
+            <div class="droite">
+                <div id="graph4" style="width:100%; height:400px"></div></div>
+    
+                
+    
+                <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.1/dist/echarts.js"></script>
+                <script>
+                  fetch('./feu.json')
+                    .then((response) => response.json())
+                    .then((json) => {
+                      // Initialize the echarts instance based on the prepared dom
+                      const myChart = echarts.init(document.querySelector('#graph4'));
+                
+                      const tableauDeNombres = json.map((unObjet) => unObjet['HAUTE-CORSE__1'])
+                
+                
+                      // Specify the configuration items and data for the chart
+                      const option = {
+                
+    
+                        tooltip: {},
+                        title: {
+                        text: 'Superficie brulé en haute corse ' //CHANGER LE TITRE ICI
+},
+                        
+                        xAxis: {
+                          data:  ["0/5","5/10","10/15","15/20","20/25","25/30","30/35","40/45","45/50","50/55","+55"]
+                    },
+                        yAxis: {
+                        },
+                        series: [
+                          {
+                            
+                            name: 'Surface brulée',
+                            type: 'bar',
+                            color: '#77AD78',
+                            
+                            data: tableauDeNombres // Mets les valeurs pour avoir les bars
+                          }
+                        ]
+                      };
+                
+                      // Display the chart using the configuration items and data just specified.
+                      myChart.setOption(option);
+                
+                    });
+                
+                </script>
+    
+
+
+        </div>
+    </div>
+
+
+</section>
+
+<section class="deuxpartie">
+
+    <h2 id="titredeuxpartie">Les projets autour du site</h2>
+    <div id="img">
+    <div class="img"><img src="Affiche.png" alt="affiche d'une publicité pour le site"></div>
+    <div class="img"><img src="post.png" alt="post post pour la publicité du site"></div>
+    </div>
+    </section>    
+
+
+    </main>
+    <footer>
+        <a href="https://www.promethee.com/">Lien vers le sites pour plus de donnée sur les incendies</a>
+    </footer>
+</body>
+</html>
